@@ -1,17 +1,17 @@
 This is a branch focusing on the Absolute Control feature.
 
-*Servo and 
-*Accro Trainer are disabled
+* Servo and 
+* Accro Trainer are disabled
 
-*ABSOLUTE_CONTROL
-*DYN_LPF
-*D_MIN
-*ITERM_RELAX
-*RC_SMOOTHING_FILTER
-*TPA_MODE
-*THROTTLE_BOOST
-*INTEGRATED_YAW_CONTROL
-*AIRMODE_LPF
+* ABSOLUTE_CONTROL
+* DYN_LPF
+* D_MIN
+* ITERM_RELAX
+* RC_SMOOTHING_FILTER
+* TPA_MODE
+* THROTTLE_BOOST
+* INTEGRATED_YAW_CONTROL
+* AIRMODE_LPF
 are enabled by default for STM32F3 Flight controller
 
 for targets 
