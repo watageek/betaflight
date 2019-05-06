@@ -160,15 +160,27 @@
 #endif
 
 #if (FLASH_SIZE > 64)
-#define USE_ACRO_TRAINER
+//#define USE_ACRO_TRAINER  // Remove Feature to fit into flash Abolute-Control_STM32F3
 #define USE_BLACKBOX
 #define USE_CLI_BATCH
 #define USE_RESOURCE_MGMT
 #define USE_RUNAWAY_TAKEOFF     // Runaway Takeoff Prevention (anti-taz)
-#define USE_SERVOS
+//#define USE_SERVOS  // Remove Feature to fit into flash Abolute-Control_STM32F3
 #define USE_TELEMETRY
 #define USE_TELEMETRY_FRSKY_HUB
 #define USE_TELEMETRY_SMARTPORT
+
+#define USE_ABSOLUTE_CONTROL   // all the feature re-enabled on STM32F3
+#define USE_DYN_LPF
+#define USE_D_MIN
+#define USE_ITERM_RELAX
+#define USE_RC_SMOOTHING_FILTER
+#define USE_TPA_MODE
+#define USE_THROTTLE_BOOST
+#define USE_INTEGRATED_YAW_CONTROL  // along Enabling ABSOLUTE_CONTROL on STM32F3
+
+#define USE_AIRMODE_LPF
+
 #endif
 
 #if (FLASH_SIZE > 128)
@@ -207,20 +219,14 @@
 
 #if ((FLASH_SIZE > 256) || (FEATURE_CUT_LEVEL < 8))
 #define USE_LAUNCH_CONTROL
-#define USE_DYN_LPF
-#define USE_D_MIN
 #endif
 
 #if ((FLASH_SIZE > 256) || (FEATURE_CUT_LEVEL < 7))
-#define USE_THROTTLE_BOOST
-#define USE_INTEGRATED_YAW_CONTROL
+#define USE_HUFFMAN
 #endif
 
 #if ((FLASH_SIZE > 256) || (FEATURE_CUT_LEVEL < 6))
-#define USE_ITERM_RELAX
-#define USE_RC_SMOOTHING_FILTER
 #define USE_THRUST_LINEARIZATION
-#define USE_TPA_MODE
 #endif
 
 #if ((FLASH_SIZE > 256) || (FEATURE_CUT_LEVEL < 5))
@@ -228,7 +234,6 @@
 #endif
 
 #if ((FLASH_SIZE > 256) || (FEATURE_CUT_LEVEL < 4))
-#define USE_HUFFMAN
 #define USE_PINIO
 #define USE_PINIOBOX
 #endif
@@ -265,7 +270,6 @@
 #endif // FLASH_SIZE > 128
 
 #if (FLASH_SIZE > 256)
-#define USE_AIRMODE_LPF
 #define USE_DASHBOARD
 #define USE_GPS
 #define USE_GPS_NMEA
@@ -284,7 +288,6 @@
 #define USE_TELEMETRY_MAVLINK
 #define USE_UNCOMMON_MIXERS
 #define USE_SIGNATURE
-#define USE_ABSOLUTE_CONTROL
 #define USE_HOTT_TEXTMODE
 #define USE_LED_STRIP_STATUS_MODE
 #define USE_VARIO
