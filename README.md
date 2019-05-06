@@ -9,7 +9,8 @@ Those features:
 * Serial 4 way bl heli bootloader
 * RCDevice
 * Gyro LPF_2
-* ESC Brushed Auto-Detect
+* PWM RX
+* Serial_RX SUMH and XBUS
   
   
   are disabled
