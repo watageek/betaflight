@@ -25,10 +25,14 @@ __________________________________________________________
 * RC_SMOOTHING_FILTER
 * TPA_MODE
 * THROTTLE_BOOST
-* INTEGRATED_YAW_CONTROL
 * AIRMODE_LPF
  
  are now enabled by default for STM32F3 Flight controller
+ 
+ * INTEGRATED_YAW_CONTROL
+  is off by default.
+  to enable it follow the guide lines on the Offficial Betaflight wiki
+   https://github.com/betaflight/betaflight/wiki/Integrated-Yaw
 
 ___________________
 for targets : 
