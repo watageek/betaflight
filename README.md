@@ -1,9 +1,16 @@
 This is a branch focusing on the Absolute Control feature.
 
 * Servo and 
-* Accro Trainer are disabled
+* Accro Trainer
+* Virtual current meter 
+* Camera Control
+* Serial 4 way bl heli bootloader
+* RCDevice
+* Gyro LPF_2
+ // are disabled
 
-______________________________________________________________________________________
+
+__________________________________________________________
 
 * ABSOLUTE_CONTROL
 * DYN_LPF
