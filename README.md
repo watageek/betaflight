@@ -26,6 +26,7 @@ __________________________________________________________
 * THROTTLE_BOOST
 * INTEGRATED_YAW_CONTROL
 * AIRMODE_LPF
+ 
  are now enabled by default for STM32F3 Flight controller
 
 ___________________
