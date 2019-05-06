@@ -1,5 +1,7 @@
 This is a branch focusing on the Absolute Control feature.
-
+_________________________________________________
+Those features:
+ 
 * Servo and 
 * Accro Trainer
 * Virtual current meter 
@@ -7,9 +9,10 @@ This is a branch focusing on the Absolute Control feature.
 * Serial 4 way bl heli bootloader
 * RCDevice
 * Gyro LPF_2
+* ESC Brushed Auto-Detect
   
   
- // are disabled
+  are disabled
 
 
 __________________________________________________________
@@ -23,7 +26,7 @@ __________________________________________________________
 * THROTTLE_BOOST
 * INTEGRATED_YAW_CONTROL
 * AIRMODE_LPF
- are enabled by default for STM32F3 Flight controller
+ are now enabled by default for STM32F3 Flight controller
 
 ___________________
 for targets : 
