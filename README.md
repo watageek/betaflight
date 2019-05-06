@@ -10,7 +10,7 @@ Those features:
 * RCDevice
 * Gyro LPF_2
 * PWM RX
-* Serial_RX SUMH and XBUS
+* Serial_RX SUMD, SUMH and XBUS
   
   
   are disabled
