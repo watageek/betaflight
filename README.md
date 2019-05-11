@@ -34,11 +34,13 @@ __________________________________________________________
   to enable it follow the guide lines on the Offficial Betaflight wiki
    https://github.com/betaflight/betaflight/wiki/Integrated-Yaw
 
-___________________
+ 
 for targets : 
 \AIORACERF3 \AIR32 \AIRHEROF3 \ALIENFLIGHTF3 \BEEBRAIN_V2D \BEEBRAIN_V2F \BEESTORM \BETAFLIGHTF3 \CHEBUZZF3 \COLIBRI_RACE \CRAZYBEEF3DX \CRAZYBEEF3FR \CRAZYBEEF3FS \DOGE EACHIF3 \FF_ACROWHOOPSP \FF_KOMBINI \FF_PIKOBLX \FF_RADIANCE \FLIP32F3OSD \FRSKYF3 \FURYF3 \FURYF3OSD \IMPULSERCF3 \IRCFUSIONF3 \IRCSYNERGYF3 \ISHAPEDF3 \KISSCC \KISSFC \LUMBAF3 \LUXV2_RACE \LUX_RACE \MIDELICF3 \MOTOLAB \MULTIFLITEPICO \OMNIBUS \RACEBASE \RCEXPLORERF3 \RG_SSD_F3 \RMDO \SINGULARITY \SIRINFPV \SPARKY \SPRACINGF3 \SPRACINGF3EVO \SPRACINGF3MINI \SPRACINGF3MQ \SPRACINGF3NEO \STM32F3DISCOVERY \TINYBEEF3 \TINYFISH \X_RACERSPI \ZCOREF3
 
 Enjoy
+ 
+  
 ![Important Notice: Betaflight 4.0 will be the last release to include support for STM32F3 based flight controllers. (This includes all boards with 'F3' in the name.)](docs/assets/images/stm32f3_retirement_notice.svg)
 
 (Please see the [note](https://github.com/betaflight/betaflight#end-of-active-development-for-stm32f3-based-flight-controllers) below.)
