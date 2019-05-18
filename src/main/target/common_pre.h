@@ -223,7 +223,6 @@
 #if ((FLASH_SIZE > 256) || (FEATURE_CUT_LEVEL < 10))
 
 #endif
-/*
 #if ((FLASH_SIZE > 256) || (FEATURE_CUT_LEVEL < 9))
 #define USE_GYRO_LPF2
 #endif
