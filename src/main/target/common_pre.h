@@ -170,17 +170,6 @@
 #define USE_TELEMETRY_FRSKY_HUB
 #define USE_TELEMETRY_SMARTPORT
 
-#define USE_ABSOLUTE_CONTROL   // all the feature re-enabled on STM32F3
-#define USE_DYN_LPF
-#define USE_D_MIN
-#define USE_ITERM_RELAX
-#define USE_RC_SMOOTHING_FILTER
-#define USE_TPA_MODE
-#define USE_THROTTLE_BOOST
-#define USE_INTEGRATED_YAW_CONTROL  // along Enabling ABSOLUTE_CONTROL on STM32F3
-
-#define USE_AIRMODE_LPF
-
 #endif
 
 #if (FLASH_SIZE > 128)
@@ -191,11 +180,37 @@
 #define USE_TELEMETRY_CRSF
 #define USE_TELEMETRY_SRXL
 
+#define USE_GYRO_DLPF_EXPERIMENTAL
+#define USE_ABSOLUTE_CONTROL   // all the feature re-enabled on STM32F3
+#define USE_DYN_LPF
+#define USE_D_MIN
+#define USE_ITERM_RELAX
+#define USE_RC_SMOOTHING_FILTER
+#define USE_TPA_MODE
+#define USE_THROTTLE_BOOST
+#define USE_INTEGRATED_YAW_CONTROL  // along Enabling ABSOLUTE_CONTROL on STM32F3
+#define USE_AIRMODE_LPF
+#define USE_THRUST_LINEARIZATION
+#define USE_LAUNCH_CONTROL
+
+#define USE_VIRTUAL_CURRENT_METER
+#define USE_CAMERA_CONTROL
+#define USE_ESC_SENSOR
+#define USE_SERIAL_4WAY_BLHELI_BOOTLOADER
+#define USE_RCDEVICE
+#define USE_VTX_COMMON
+#define USE_VTX_CONTROL
+#define USE_VTX_SMARTAUDIO
+#define USE_VTX_TRAMP
+#define USE_CMS
+#define USE_MSP_DISPLAYPORT
+#define USE_MSP_OVER_TELEMETRY
+/*
 #if ((FLASH_SIZE > 256) || (FEATURE_CUT_LEVEL < 12))
 #define USE_CMS
 #define USE_MSP_DISPLAYPORT
 #define USE_MSP_OVER_TELEMETRY
-#define USE_LED_STRIP
+//#define USE_LED_STRIP
 #endif
 
 #if ((FLASH_SIZE > 256) || (FEATURE_CUT_LEVEL < 11))
@@ -206,19 +221,14 @@
 #endif
 
 #if ((FLASH_SIZE > 256) || (FEATURE_CUT_LEVEL < 10))
-//#define USE_VIRTUAL_CURRENT_METER
-//#define USE_CAMERA_CONTROL
-#define USE_ESC_SENSOR
-//#define USE_SERIAL_4WAY_BLHELI_BOOTLOADER
-//#define USE_RCDEVICE
-#endif
 
+#endif
+/*
 #if ((FLASH_SIZE > 256) || (FEATURE_CUT_LEVEL < 9))
-//#define USE_GYRO_LPF2
+#define USE_GYRO_LPF2
 #endif
 
 #if ((FLASH_SIZE > 256) || (FEATURE_CUT_LEVEL < 8))
-#define USE_LAUNCH_CONTROL
 #endif
 
 #if ((FLASH_SIZE > 256) || (FEATURE_CUT_LEVEL < 7))
@@ -226,7 +236,7 @@
 #endif
 
 #if ((FLASH_SIZE > 256) || (FEATURE_CUT_LEVEL < 6))
-#define USE_THRUST_LINEARIZATION
+
 #endif
 
 #if ((FLASH_SIZE > 256) || (FEATURE_CUT_LEVEL < 5))
@@ -258,7 +268,7 @@
 //#define USE_SERIALRX_SUMH       // Graupner legacy protocol
 //#define USE_SERIALRX_XBUS       // JR
 #endif
-
+*/
 #if ((FLASH_SIZE > 256) || (FEATURE_CUT_LEVEL < 1))
 #define USE_BOARD_INFO
 #define USE_EXTENDED_CMS_MENUS
@@ -276,7 +286,6 @@
 #define USE_GPS_NMEA
 #define USE_GPS_UBLOX
 #define USE_GPS_RESCUE
-#define USE_GYRO_DLPF_EXPERIMENTAL
 #define USE_OSD
 #define USE_OSD_OVER_MSP_DISPLAYPORT
 #define USE_MULTI_GYRO
