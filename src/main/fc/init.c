@@ -341,6 +341,9 @@ void init(void)
             if (bothButtonsHeld) {
                 if (--secondsRemaining == 0) {
                     resetEEPROM();
+#ifdef USE_PERSISTENT_OBJECTS
+                    persistentObjectWrite(PERSISTENT_OBJECT_RESET_REASON, RESET_NONE);
+#endif
                     systemReset();
                 }
                 delay(1000);
@@ -710,18 +713,18 @@ void init(void)
     }
 #endif
 
-#ifdef USE_FLASHFS
-#if defined(USE_FLASH_CHIP)
+#ifdef USE_FLASH_CHIP
     flashInit(flashConfig());
-#endif
+#ifdef USE_FLASHFS
     flashfsInit();
+#endif
 #endif
 
 #ifdef USE_BLACKBOX
 #ifdef USE_SDCARD
     if (blackboxConfig()->device == BLACKBOX_DEVICE_SDCARD) {
         if (sdcardConfig()->mode) {
-            sdcardInsertionDetectInit();
+            sdcardInsertionDetectInit(sdcardConfig());
             sdcard_init(sdcardConfig());
             afatfs_init();
         } else {

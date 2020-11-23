@@ -216,9 +216,13 @@
 
 #ifdef USE_UNIFIED_TARGET
 #define USE_CONFIGURATION_STATE
+#endif
 
-// Setup crystal frequency for backward compatibility
-// Should be set to zero for generic targets and set with CLI variable set system_hse_value.
+// Setup crystal frequency on F4 for backward compatibility
+// Should be set to zero for generic targets to ensure USB is working
+// when unconfigured for targets with non-standard crystal.
+// Can be set at runtime with with CLI parameter 'system_hse_value'.
+#if !defined(STM32F4) || defined(USE_UNIFIED_TARGET)
 #define SYSTEM_HSE_VALUE 0
 #else
 #ifdef TARGET_XTAL_MHZ
@@ -226,7 +230,7 @@
 #else
 #define SYSTEM_HSE_VALUE (HSE_VALUE/1000000U)
 #endif
-#endif // USE_UNIFIED_TARGET
+#endif // !STM32F4 || USE_UNIFIED_TARGET
 
 // Number of pins that needs pre-init
 #ifdef USE_SPI
@@ -235,7 +239,7 @@
 #endif
 #endif
 
-#if (!defined(USE_FLASHFS) || !defined(USE_RTC_TIME) || !defined(USE_USB_MSC))
+#if (!defined(USE_FLASHFS) || !defined(USE_RTC_TIME) || !defined(USE_USB_MSC) || !defined(USE_PERSISTENT_OBJECTS))
 #undef USE_PERSISTENT_MSC_RTC
 #endif
 
@@ -285,6 +289,12 @@
 #undef BEEPER_PWM_HZ
 #endif
 
+#if defined(USE_DSHOT) || defined(USE_LED_STRIP) || defined(USE_TRANSPONDER)
+#define USE_TIMER_DMA
+#else
+#undef USE_DMA_SPEC
+#endif
+
 #if !defined(USE_DMA_SPEC)
 #undef USE_TIMER_MGMT
 #endif
@@ -307,4 +317,8 @@
 // TODO: Remove this once HAL support is fixed for ESCSERIAL
 #ifdef STM32F7
 #undef USE_ESCSERIAL
+#endif
+
+#ifndef USE_ITERM_RELAX
+#undef USE_ABSOLUTE_CONTROL
 #endif
